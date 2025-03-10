@@ -1,11 +1,26 @@
 {
   "name": "Docs",
-  "description": "Sample web application using the Go framework Martini",
-  "logo": "https://scalingo.com/logo.svg",
-  "repository": "https://github.com/Scalingo/sample-go-martini",
-  "website": "https://scalingo.com",
+  "description": "Open source document editor for collaborative knowledge building",
+  "repository": "https://github.com/TheoPouletSouchard/sample-go-martini",
+  "website": "https://github.com/TheoPouletSouchard/sample-go-martini",
+  "stack": "scalingo-22",
+  "addons": [
+    {
+      "plan": "postgresql:postgresql-starter-512",
+      "options": {
+        "version": "16"
+      }
+    },
+    {
+      "plan": "redis:redis-starter-512"
+    }
+  ],
   "formation": {
     "web": {
+      "amount": 1,
+      "size": "M"
+    },
+    "worker": {
       "amount": 1,
       "size": "S"
     }
